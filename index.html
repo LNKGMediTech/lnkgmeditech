@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LNKG Brochure - Seamless Patient Transfer Bed</title>
+    <title>LNKG Brochure - Advanced Patient Transfer Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #005B96;
+            --secondary: #00A1CB;
+            --light-bg: #F5F9FC;
+            --dark: #003D5C;
+            --alert: #E63946;
+            --success: #4CAF50;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,26 +22,27 @@
         }
         
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(1deg, #667eea 0%, #764ba2 100%);
+            background: var(--light-bg);
             min-height: 100vh;
             padding: 20px;
+            color: #333;
         }
         
         .brochure {
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,59,92,0.1);
             overflow: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #5b6fd1 0%, #6c7ee0 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 60px 40px;
+            padding: 80px 40px;
             text-align: center;
             position: relative;
             border-radius: 0;
@@ -48,11 +59,14 @@
         }
         
         .logo {
-            font-size: 4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 1;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         
         .tagline {
@@ -61,36 +75,51 @@
             opacity: 0.9;
             position: relative;
             z-index: 1;
+            font-weight: 600;
+        }
+        
+        .company-name {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            font-weight: 600;
+            letter-spacing: 0.5px;
         }
         
         .certifications {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px;
             margin-top: 30px;
             position: relative;
             z-index: 1;
+            flex-wrap: wrap;
         }
         
         .cert-badge {
-            background: rgba(255,255,255,0.2);
-            padding: 10px 25px;
-            border-radius: 20px;
-            font-weight: bold;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.3);
+            background: white;
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            box-shadow: 0 2px 5px rgba(0,91,150,0.1);
+            border: 2px solid rgba(0,161,203,0.3);
+            font-size: 0.9rem;
         }
         
         .content {
-            padding: 50px 40px;
+            padding: 60px 40px;
         }
         
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
         
         .section-title {
-            color: #5b6fd1;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
             font-size: 2.5rem;
             font-weight: bold;
             text-align: center;
@@ -101,33 +130,36 @@
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 100px;
             height: 4px;
-            background: linear-gradient(135deg, #5b6fd1, #764ba2);
-            border-radius: 1px;
+            background: var(--secondary);
+            border-radius: 2px;
         }
         
         .competitive-advantage {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 40px;
-            border-radius: 8px;
+            padding: 50px 40px;
+            border-radius: 12px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 5px 20px rgba(0,91,150,0.15);
         }
         
         .competitive-advantage h3 {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
         }
         
         .competitive-advantage p {
             font-size: 1.2rem;
             opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .safety-guidelines {
@@ -139,26 +171,30 @@
         
         .risk-card {
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 12px;
             color: white;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .yellow-risk {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            background: #FFC107;
+            color: #333;
         }
         
         .red-risk {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+            background: var(--alert);
+            color: white;
         }
         
         .green-risk {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            background: var(--success);
+            color: white;
         }
         
         .risk-title {
-            font-size: 1.4rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
             font-weight: bold;
             margin-bottom: 15px;
             display: flex;
@@ -171,37 +207,46 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            gap: 25px;
-            margin-bottom: 40px;
+            gap: 30px;
+            margin-bottom: 50px;
         }
         
         .advantage-card {
-            background: #f8f9ff;
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 5px solid #5b6fd1;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary);
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,91,150,0.05);
         }
         
         .advantage-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(91, 111, 209, 0.1);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,91,150,0.1);
         }
         
         .advantage-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
+            font-size: 2.5rem;
+            background: rgba(0,161,203,0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
         }
         
         .advantage-title {
-            color: #5b6fd1;
-            font-size: 1.3rem;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.4rem;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         .departments-grid {
@@ -212,101 +257,164 @@
         }
         
         .department-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 25px;
-            border-radius: 8px;
+            padding: 30px 25px;
+            border-radius: 12px;
             text-align: center;
             font-weight: bold;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,91,150,0.1);
         }
         
         .department-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,91,150,0.2);
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-bottom: 50px;
         }
         
         .service-card {
             background: white;
             border: 2px solid #e1e5f2;
-            padding: 25px;
-            border-radius: 8px;
+            padding: 30px 25px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,91,150,0.05);
         }
         
         .service-card:hover {
-            border-color: #5b6fd1;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(91, 111, 209, 0.1);
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,91,150,0.1);
         }
         
         .company-intro {
-            background: #f8f9ff;
-            padding: 40px;
-            border-radius: 8px;
+            background: var(--light-bg);
+            padding: 50px 40px;
+            border-radius: 12px;
             margin-bottom: 40px;
         }
         
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+            gap: 25px;
+            margin-top: 40px;
         }
         
         .stat-card {
             background: white;
-            padding: 25px;
-            border-radius: 8px;
+            padding: 30px 25px;
+            border-radius: 12px;
             text-align: center;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 15px rgba(0,91,150,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,91,150,0.1);
         }
         
         .stat-number {
-            font-size: 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
             font-weight: bold;
-            color: #5b6fd1;
+            color: var(--primary);
             margin-bottom: 10px;
         }
         
         .testing-section {
-            background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 40px;
-            border-radius: 8px;
+            padding: 50px 40px;
+            border-radius: 12px;
             text-align: center;
+            box-shadow: 0 5px 20px rgba(0,91,150,0.15);
+        }
+        
+        .image-container {
+            flex: 1;
+            min-width: 300px;
+            max-width: 45%;
+            transition: all 0.3s ease;
+        }
+        
+        .image-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-container div {
+            position: relative;
+            padding-bottom: 56.25%;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,91,150,0.15);
+        }
+        
+        .image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .image-container img:hover {
+            transform: scale(1.02);
+        }
+        
+        .image-container p {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            font-family: 'Montserrat', sans-serif;
         }
         
         @media (max-width: 768px) {
             .brochure {
                 margin: 10px;
+                border-radius: 8px;
             }
             
             .header {
-                padding: 40px 20px;
+                padding: 60px 20px;
             }
             
             .logo {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             .tagline {
                 font-size: 1.2rem;
             }
             
+            .company-name {
+                font-size: 1rem;
+            }
+            
             .content {
-                padding: 30px 20px;
+                padding: 40px 20px;
             }
             
             .section-title {
                 font-size: 2rem;
+            }
+            
+            .section-title::after {
+                width: 80px;
+                bottom: -12px;
             }
             
             .safety-guidelines {
@@ -316,11 +424,18 @@
             .advantages-grid {
                 grid-template-columns: 1fr;
                 grid-template-rows: repeat(6, 1fr);
+                gap: 20px;
             }
             
-            .certifications {
-                flex-direction: column;
-                align-items: center;
+            .cert-badge {
+                padding: 6px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .image-container {
+                min-width: 100%;
+                max-width: 100%;
+                margin-bottom: 30px;
             }
         }
     </style>
@@ -330,14 +445,13 @@
         <!-- Header Section -->
         <div class="header">
             <div class="logo">Advanced Intelligent Patient Transfer Solutions</div>
-            <div style="font-size: 1.4rem; margin-bottom: 15px; opacity: 0.9; position: relative; z-index: 1; font-weight: 500;">Seamless Patient Transfer Bed</div>
-            <div style="font-size: 1.2rem; margin-bottom: 20px; opacity: 0.9; position: relative; z-index: 1; font-weight: 600;">LNKG - SHANDONG LENING MEDICAL TECHNOLOGY CO., LTD</div>
-            <p style="margin-top: 15px; font-size: 1.1rem; position: relative; z-index: 1;"></p>
+            <div class="tagline">Seamless Patient Transfer Bed</div>
+            <div class="company-name">LNKG - SHANDONG LENING MEDICAL TECHNOLOGY CO., LTD</div>
             <div class="certifications">
                 <div class="cert-badge">FDA Registered</div>
-                <div class="cert-badge">FDA 501(k) Exempt</div>
-                <div class="cert-badge">TGA</div>
-                <div class="cert-badge">CE</div>
+                <div class="cert-badge">FDA 510(k) Exempt</div>
+                <div class="cert-badge">TGA GMP</div>
+                <div class="cert-badge">CE Certified</div>
             </div>
         </div>
 
@@ -376,21 +490,19 @@
             <div class="section">
                 <h2 class="section-title">Product Showcase</h2>
                 <div class="image-gallery" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; align-items: flex-start; flex-wrap: wrap;">
-                    <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
-                        <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 6px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);">
+                    <div class="image-container">
+                        <div>
                             <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-PW1.png" 
-                                 alt="LN-IPTS-PW1 Medical Transfer Robot" 
-                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+                                 alt="LN-IPTS-PW1 Medical Transfer Robot">
                         </div>
-                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-PW1 Model</p>
+                        <p>LN-IPTS-PW1 Model</p>
                     </div>
-                    <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
-                        <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 6px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);">
+                    <div class="image-container">
+                        <div>
                             <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-P2.png" 
-                                 alt="LN-IPTS-P2 Medical Transfer Robot" 
-                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+                                 alt="LN-IPTS-P2 Medical Transfer Robot">
                         </div>
-                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-P2 Model</p>
+                        <p>LN-IPTS-P2 Model</p>
                     </div>
                 </div>
             </div>
@@ -403,7 +515,7 @@
                     <p>Our groundbreaking autonomous transport system eliminates all manual patient handling by healthcare staff. Through advanced robotic engineering and intelligent automation, patients are seamlessly transferred with zero physical intervention—transforming high-risk, labor-intensive procedures into effortless, dignified care experiences.</p>
                     <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.2); border-radius: 6px; backdrop-filter: blur(10px);">
                         <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">✨ Revolutionary Impact:</p>
-                        <p>• Complete elimination of staff physical strain • Superior patient dignity and comfort • Dramatic injury prevention • Seamless workflow integration • Optimized for patients with limited mobility • Maximum 440 lbs </p>
+                        <p>• Complete elimination of staff physical strain • Superior patient dignity and comfort • Dramatic injury prevention • Seamless workflow integration • Optimized for patients with limited mobility • Maximum 440 lbs capacity</p>
                     </div>
                 </div>
             </div>
@@ -465,7 +577,7 @@
                 <h2 class="section-title">Comprehensive Service Package</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h4>One Person, One Vehicle Care </h4>
+                        <h4>One Person, One Vehicle Care</h4>
                     </div>
                     <div class="service-card">
                         <h4>Bed Board Heat Preservation Function</h4>
