@@ -23,8 +23,8 @@
             max-width: 1200px;
             margin: 0 auto;
             background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             overflow: hidden;
         }
         
@@ -34,6 +34,7 @@
             padding: 60px 40px;
             text-align: center;
             position: relative;
+            border-radius: 0;
         }
         
         .header::before {
@@ -74,7 +75,7 @@
         .cert-badge {
             background: rgba(255,255,255,0.2);
             padding: 10px 25px;
-            border-radius: 50px;
+            border-radius: 20px;
             font-weight: bold;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255,255,255,0.3);
@@ -106,17 +107,17 @@
             width: 80px;
             height: 4px;
             background: linear-gradient(135deg, #5b6fd1, #764ba2);
-            border-radius: 2px;
+            border-radius: 1px;
         }
         
         .competitive-advantage {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 8px;
             text-align: center;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.3);
+            box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
         }
         
         .competitive-advantage h3 {
@@ -138,10 +139,10 @@
         
         .risk-card {
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 8px;
             color: white;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
         .yellow-risk {
@@ -177,7 +178,7 @@
         .advantage-card {
             background: #f8f9ff;
             padding: 30px;
-            border-radius: 15px;
+            border-radius: 8px;
             border-left: 5px solid #5b6fd1;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
@@ -188,7 +189,7 @@
         
         .advantage-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(91, 111, 209, 0.1);
+            box-shadow: 0 10px 20px rgba(91, 111, 209, 0.1);
         }
         
         .advantage-icon {
@@ -214,7 +215,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 8px;
             text-align: center;
             font-weight: bold;
             transition: transform 0.3s ease;
@@ -235,7 +236,7 @@
             background: white;
             border: 2px solid #e1e5f2;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 8px;
             text-align: center;
             transition: all 0.3s ease;
         }
@@ -243,13 +244,13 @@
         .service-card:hover {
             border-color: #5b6fd1;
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(91, 111, 209, 0.1);
+            box-shadow: 0 5px 15px rgba(91, 111, 209, 0.1);
         }
         
         .company-intro {
             background: #f8f9ff;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 8px;
             margin-bottom: 40px;
         }
         
@@ -263,9 +264,9 @@
         .stat-card {
             background: white;
             padding: 25px;
-            border-radius: 15px;
+            border-radius: 8px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
         }
         
         .stat-number {
@@ -279,7 +280,7 @@
             background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
             color: white;
             padding: 40px;
-            border-radius: 20px;
+            border-radius: 8px;
             text-align: center;
         }
         
@@ -370,40 +371,36 @@
                 </p>
             </div>
 
-            <!-- Rest of the content remains unchanged -->
-            <!-- Add this new Product Showcase section before the Zero Manual Handling section -->
+            <!-- Product Showcase Section -->
             <div class="section">
-    <h2 class="section-title">Product Showcase</h2>
-    <div class="image-gallery" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; align-items: flex-start; flex-wrap: wrap;">
-        <!-- First Image -->
-        <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
-            <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-PW1.png" 
-                     alt="LN-IPTS-PW1 Medical Transfer Robot" 
-                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+                <h2 class="section-title">Product Showcase</h2>
+                <div class="image-gallery" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 40px; align-items: flex-start; flex-wrap: wrap;">
+                    <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
+                        <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 6px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);">
+                            <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-PW1.png" 
+                                 alt="LN-IPTS-PW1 Medical Transfer Robot" 
+                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-PW1 Model</p>
+                    </div>
+                    <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
+                        <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 6px; box-shadow: 0 5px 10px rgba(0,0,0,0.1);">
+                            <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-P2.png" 
+                                 alt="LN-IPTS-P2 Medical Transfer Robot" 
+                                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
+                        </div>
+                        <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-P2 Model</p>
+                    </div>
+                </div>
             </div>
-            <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-PW1 Model</p>
-        </div>
-        
-        <!-- Second Image -->
-        <div class="image-container" style="flex: 1; min-width: 300px; max-width: 45%;">
-            <div style="position: relative; padding-bottom: 56.25%; overflow: hidden; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                <img src="https://raw.githubusercontent.com/lnkgmeditech/lnkgmeditech/main/LN-IPTS-P2.png" 
-                     alt="LN-IPTS-P2 Medical Transfer Robot" 
-                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; object-position: center;">
-            </div>
-            <p style="text-align: center; margin-top: 15px; font-weight: bold; color: #5b6fd1;">LN-IPTS-P2 Model</p>
-        </div>
-    </div>
-</div>
-            
+
             <!-- Key Competitive Advantage Section -->
             <div class="section">
                 <div class="competitive-advantage">
                     <h3>"Zero Manual Handling"</h3>
                     <p style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 500;">🚀 Revolutionizing Patient Transfer Technology</p>
                     <p>Our groundbreaking autonomous transport system eliminates all manual patient handling by healthcare staff. Through advanced robotic engineering and intelligent automation, patients are seamlessly transferred with zero physical intervention—transforming high-risk, labor-intensive procedures into effortless, dignified care experiences.</p>
-                    <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.2); border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="margin-top: 25px; padding: 20px; background: rgba(255,255,255,0.2); border-radius: 6px; backdrop-filter: blur(10px);">
                         <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 10px;">✨ Revolutionary Impact:</p>
                         <p>• Complete elimination of staff physical strain • Superior patient dignity and comfort • Dramatic injury prevention • Seamless workflow integration • Optimized for patients with limited mobility • Maximum 440 lbs </p>
                     </div>
